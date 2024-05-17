@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <form action="controlador" method="get">
+  <form action="controlador" method="post" enctype="multipart/form-data"
     <div>
     <input type="number" step="1" min="0" max="20" value=5 name=edad  disabled>
     </div>
@@ -34,10 +34,27 @@
     <div>
       <label for="ciudad">seleccione ciudad</label>
       <select name="ciudad" id="ciudad" disabled >
-      <option value="1" selected>giron</option>
-      <option value="2">bucaramanga</option>
-      <option value="3">florida</option> 
+      <option value="1" selected name>giron</option>
+      <option value="2" name>bucaramanga</option>
+      <option value="3" name>florida</option> 
       </select>
+    </div>
+    <div>
+      <label for="sexo">seleccione su genero</label>
+      <input type="radio" name="sexo"> masculino
+      <input type="radio" name="sexo">femenino
+    </div>
+    <div>
+    <label for="habilidades">
+    <input type="checkbox" name=""> HTML
+    <input type="checkbox" name=""> GIT
+    <input type="checkbox" name=""> CLI
+    <input type="checkbox" name=""> JS
+    </label>
+    </div>
+    <div>
+    <input type="file" accept=".jpg,.phg" multiple>
+    </div>
     </div>
     <button type="submint">guardar</button>
   </form>
